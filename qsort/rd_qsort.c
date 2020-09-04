@@ -202,7 +202,12 @@ void qsort_test() {
           //the last two sorts are reverse
           quick_sort_rev(array, n);
           errors += checker(golden_array_rev, array);
-      }      
+      }
+#if USE_MIPS == 1
+  asm volatile ("move $a0, %0\n"   /* Move 'i' into $a0 */
+                "li $v0, 1\n"      /* Set for 'PRINT_INT' syscall */
+                "syscall" : : "r" (i));
+#endif
   }
 
 #if USE_MIPS == 1
