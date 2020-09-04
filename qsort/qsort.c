@@ -102,6 +102,17 @@ uint32_t golden_array_rev[array_elements] =  {
 //
 //*****************************************************************************
 
+void qsort_test(void);
+
+int main()
+{
+  //start the test
+  qsort_test();
+
+  return 0;
+
+}
+
 void quick_sort (uint32_t *A, int len) {   
     //TODO: user enters code
     if (len < 2) return;
@@ -202,15 +213,6 @@ void qsort_test() {
 #else
   printf("Local Errors: %d\n", errors);
 #endif
-}
-
-int main()
-{
-  //start the test
-  qsort_test();
-
-  return 0;
-
 }
 
 
