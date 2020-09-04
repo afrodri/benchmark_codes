@@ -76,7 +76,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
 
 #define		array_elements				100
-#define USE_MIPS 0
+#define USE_MIPS 1
 
 #if USE_MIPS == 1
 typedef unsigned int uint32_t;
